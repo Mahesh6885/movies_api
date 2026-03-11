@@ -6,6 +6,7 @@ class Movie(models.Model):
     year=models.IntegerField()
     rating=models.FloatField(default=0.0)
     description=models.TextField(max_length=500)
+    image_url=models.URLField(max_length=500, null=True, blank=True)
 
     def __str__(self):
         return self.title
